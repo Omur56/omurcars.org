@@ -35,7 +35,9 @@
 --accent-color:#0071ff;
 }
 
-
+.carusel-style{
+  
+}
 html{
     font-family: Poppins;
 }
@@ -93,14 +95,15 @@ body{
             alt="dark_mode_svg"
           />
         </button>
-      <a class="navbar-brand d-block" href="#"><img src="lamborghini.svg" alt="lamborghini"> Auto Sales</a>
+      <a class="navbar-brand d-block" href="#"><img class="container-fluid w-50 h-75" src="car_logo.svg" alt="car_logo">Auto Sales</a>
+      
       <div class="container-fluid  justify-content-sm-start   w-50 h-50">
-        <form class="container-fluid justify-content-end  d-flex  form-inline   w-100 h-75">
+        <!-- <form class="container-fluid justify-content-end  d-flex  form-inline   w-100 h-75">
           <input class="form-control  w-75 h-50 p-2 me-3" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-light  p-2 me-3  " type="submit">Search</button>
-        </form>
+        </form> -->
       </div>
-      <img class="container-fluid w-25 h-25" src="car_logo.svg" alt="car_logo">
+      
 
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
         aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -140,8 +143,8 @@ body{
     </nav>
   </header>
   <sidebar>
-    <div id="carouselExampleIndicators" class="carousel slide">
-      <div class="carousel-indicators">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div class="carousel-indicators ">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
           aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
@@ -149,7 +152,7 @@ body{
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
           aria-label="Slide 3"></button>
       </div>
-      <div class="carousel-inner">
+      <div class="carousel-inner ">
         <div class="carousel-item active">
           <img src="bmw-x-series-x7-sp-desktop.jpg" class="d-block w-100" alt="bmw_x7">
         </div>
