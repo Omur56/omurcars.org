@@ -25,6 +25,7 @@
 --text-color:#232738;
 --primary-color:#3a435d;
 --accent-color:#0071ff;
+--secondary-text:#070707;
 }
 .darkmode{
     --base-color: #000000;
@@ -35,9 +36,7 @@
 --accent-color:#0071ff;
 }
 
-.carusel-style{
-  
-}
+
 html{
     font-family: Poppins;
 }
@@ -45,38 +44,99 @@ body{
     background-color: var(--base-color);
     color:var(--text-color)
 }
-#theme-switch{
-    height: 30px;
-    width: 30px;
-    padding: 0;
-    border-radius: 50%;
-    background-color: var(--base-variant);
-    display: flex;
+
+
+
+.logo{
+  
+   width: 200px;
+   height: 100px;
+  margin-right: 100px;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 0;
-    right: 20px;
-    border: none;
-}
-
-#theme-switch img{
-    fill: var(--primary-color);
-}
-#theme-switch img:last-child{
-    display: none;
-}
-.darkmode #theme-switch img:first-child{
-    display: none;
+    display: flex;
     
 }
-
-.darkmode #theme-switch img:last-child{
-    display: block;
+.catalog{
+  height: 30px;
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+  
+}
+.catalog a{
+  text-decoration: underline;
+    color:#040404;
+}
+.catalog a:active{
+  text-decoration:underline;
+    color:#ffcc00;
+}
+.catalog a:hover{
+  text-decoration: underline;
+    color:#ffcc00;
 }
 
-.darkmode nav {
-    background-color: var(--base-variant);
+.catalog a:focus{
+  text-decoration: underline;
+    color:#ffcc00;
+}
+.img-size{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  margin: 0;
+  padding: 0;
+  
+}
+.card_sales{
+  width: 50%;
+  box-sizing: border-box;
+  margin: 0 400px;
+  
+}
+
+
+@media screen and (max-width: 768px) {
+  .card_sales{
+    background-color: var(--base-color);
+  }
+  
+  .catalog{
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: underline;
+    gap: 10px;
+  }
+  
+  .img-size{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  margin: 0;
+  padding: 0;
+}
+.card_sales{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0 0px;
+  padding: 0;
+  
+  
+}
+
+
 }
 </style>
 
@@ -84,32 +144,21 @@ body{
   
 
     <nav class="navbar bg-warning">
-      <body style="background-color: #efefef;">
-        <button id="theme-switch">
-          <img
-            src="light_mode_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24 (1).svg"
-            alt="light_mode_svg"
-          />
-          <img
-            src="dark_mode_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.svg"
-            alt="dark_mode_svg"
-          />
-        </button>
-      <a class="navbar-brand d-block" href="#"><img class="container-fluid w-50 h-75" src="car_logo.svg" alt="car_logo">Auto Sales</a>
-      
-      <div class="container-fluid  justify-content-sm-start   w-50 h-50">
-        <!-- <form class="container-fluid justify-content-end  d-flex  form-inline   w-100 h-75">
-          <input class="form-control  w-75 h-50 p-2 me-3" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light  p-2 me-3  " type="submit">Search</button>
-        </form> -->
-      </div>
-      
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+      <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
         aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
+      <body style="background-color: #efefef;">
+       
+        <div>
+        
+      <a class="navbar-brand d-block logo " href="#"><img class="container-fluid container-lg container-md container-xxl  " src="car_logo.svg" alt="car_logo"></a>
+
+      </div>
+      
+
+      
       <div class="offcanvas offcanvas-end bg-primary " tabindex="-1" id="offcanvasDarkNavbar"
         aria-labelledby="offcanvasDarkNavbarLabel">
         <div class="offcanvas-header">
@@ -124,8 +173,9 @@ body{
             <li class="nav-item">
               <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
               <a class="nav-link active text-light" aria-current="page" href="#">About</a>
-              <a class="nav-link active text-light" aria-current="page" href="#">Contact</a>
+              <a class="nav-link active text-light" aria-current="page" href="#">Contactr</a>
               <a class="nav-link active text-light" aria-current="page" href="#">Blog</a>
+              
             </li>
 
           </ul>
@@ -142,6 +192,18 @@ body{
 
     </nav>
   </header>
+  <menu class="container-fluid d-flex">
+    <div class="container-fluid  catalog ">
+    <ol class="container-fluid catalog">
+     <a class="breadcrumb" href="#">Kredit</a>
+     <a class="breadcrumb" href="#">Barter</a>
+     <a class="breadcrumb" href="#">Aksesuarlar</a>
+     <a class="breadcrumb" href="#">Ehtiyyat hissələri</a>
+     <a class="breadcrumb" href="#">Təkərlər</a>
+      <a class="breadcrumb" href="#">Şinlər</a>
+      
+    </ol>
+  </menu>
   <sidebar>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <div class="carousel-indicators ">
@@ -152,7 +214,7 @@ body{
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
           aria-label="Slide 3"></button>
       </div>
-      <div class="carousel-inner ">
+      <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="bmw-x-series-x7-sp-desktop.jpg" class="d-block w-100" alt="bmw_x7">
         </div>
@@ -176,11 +238,11 @@ body{
 
   <main>
     <section class="sale">
-      <div class="container-fluid ">
-        <div class="row row-cols-2 row-cols-md-3 " >
+      <div class="container-fluid card_sales">
+        <div class="row row-cols-2 row-cols-md-4 g-1 " >
           <div class="col p-2 mb-2 ">
             <div class="card w-100 h-100">
-              <img src="BMW_X7.jpg " class="card-img-top w-100 h-75" alt="bmw_x7">
+              <img  src="BMW_X7.jpg " class="card-img-top img-size" alt="bmw_x7">
               <div class=" bg-white">
                 <h5 class="card-title fs-6 ms-3 me-3 pt-2" >79 000 $</h5>
                 <h5 class="card-title fs-6 ms-3 me-3" >
@@ -192,7 +254,7 @@ body{
           </div>
           <div class="col p-2 mb-2 ">
             <div class="card w-100 h-100">
-              <img src="Lexus_RX_300.jpg" class="card-img-top w-100 h-75" alt="lexus">
+              <img  src="Lexus_RX_300.jpg" class="card-img-top img-size" alt="lexus">
               <div class=" bg-white">
                 <h5 class="card-title fs-6 ms-3 me-3 pt-2" >48 500$</h5>
                 <h5 class="card-text fs-6 ms-3 me-3" >Lexus RX 300, 2.0 L, 2022 il, yeni</h5>
@@ -203,7 +265,7 @@ body{
           </div>
           <div class="col p-2 mb-2">
             <div class="card w-100 h-100">
-              <img src="chery_eQ7.jpg" class="card-img-top w-100 h-75" alt="chery">
+              <img src="chery_eQ7.jpg" class="card-img-top img-size" alt="chery">
               <div class="bg-white">
                 <h5 class="card-title fs-6 ms-3 me-3 pt-2">44 900 AZN</h5>
                 <h5 class="card-text fs-6 ms-3 me-3">Chery eQ7</h5>
@@ -214,7 +276,7 @@ body{
           </div>
           <div class="col p-2 mb-2">
             <div class="card w-100 h-100">
-              <img src="mercedess_amg_g63.jpg" class="card-img-top w-100 h-75" alt="mercedess">
+              <img src="mercedess_amg_g63.jpg" class="card-img-top img-size" alt="mercedess">
               <div class=" bg-white">
                 <h5 class="card-title fs-6 ms-3 me-3 pt-2">51 000$</h5>
                 <h5 class="card-title fs-6 ms-3 me-3">
@@ -226,7 +288,7 @@ body{
           </div>
           <div class="col p-2 mb-2">
             <div class="card w-100 h-100">
-              <img src="mercedess_sedan.jpg" class="card-img-top w-100" alt="mercedess_sedan">
+              <img src="mercedess_sedan.jpg" class="card-img-top img-size" alt="mercedess_sedan">
               <div class=" bg-white">
                 <h5 class="card-title fs-6 ms-3 me-3 pt-2">29 500 AZN</h5>
                 <h5 class="card-text fs-6 ms-3 me-3">Mercedes E 220 D </h5>
@@ -237,7 +299,73 @@ body{
           </div>
           <div class="col p-2 mb-2">
             <div class="card w-100 h-100">
-              <img src="changan_qiyuan_Q05.jpg" class="card-img-top w-100  " alt="changan">
+              <img src="changan_qiyuan_Q05.jpg" class="card-img-top img-size" alt="changan">
+              <div class=" bg-white">
+                <h5 class="card-title fs-6 ms-3 me-3 pt-2">32 000 AZN</h5>
+                <h5 class="card-text fs-6 ms-3 me-3">Changan Qiyuan Q05</h5>
+                <p class="card-text fs-6 ms-3 me-3">2024, 1.5 L, 2 000 km</p>
+                <button type="button" class="btn btn btn-primary btn-sm mb-3 ms-3">Call</button>
+              </div>
+            </div>
+          </div>
+          <div class="col p-2 mb-2">
+            <div class="card w-100 h-100">
+              <img src="changan_qiyuan_Q05.jpg" class="card-img-top img-size" alt="changan">
+              <div class=" bg-white">
+                <h5 class="card-title fs-6 ms-3 me-3 pt-2">32 000 AZN</h5>
+                <h5 class="card-text fs-6 ms-3 me-3">Changan Qiyuan Q05</h5>
+                <p class="card-text fs-6 ms-3 me-3">2024, 1.5 L, 2 000 km</p>
+                <button type="button" class="btn btn btn-primary btn-sm mb-3 ms-3">Call</button>
+              </div>
+            </div>
+          </div>
+          <div class="col p-2 mb-2">
+            <div class="card w-100 h-100">
+              <img src="changan_qiyuan_Q05.jpg" class="card-img-top img-size" alt="changan">
+              <div class=" bg-white">
+                <h5 class="card-title fs-6 ms-3 me-3 pt-2">32 000 AZN</h5>
+                <h5 class="card-text fs-6 ms-3 me-3">Changan Qiyuan Q05</h5>
+                <p class="card-text fs-6 ms-3 me-3">2024, 1.5 L, 2 000 km</p>
+                <button type="button" class="btn btn btn-primary btn-sm mb-3 ms-3">Call</button>
+              </div>
+            </div>
+          </div>
+          <div class="col p-2 mb-2">
+            <div class="card w-100 h-100">
+              <img src="changan_qiyuan_Q05.jpg" class="card-img-top img-size" alt="changan">
+              <div class=" bg-white">
+                <h5 class="card-title fs-6 ms-3 me-3 pt-2">32 000 AZN</h5>
+                <h5 class="card-text fs-6 ms-3 me-3">Changan Qiyuan Q05</h5>
+                <p class="card-text fs-6 ms-3 me-3">2024, 1.5 L, 2 000 km</p>
+                <button type="button" class="btn btn btn-primary btn-sm mb-3 ms-3">Call</button>
+              </div>
+            </div>
+          </div>
+          <div class="col p-2 mb-2">
+            <div class="card w-100 h-100">
+              <img src="changan_qiyuan_Q05.jpg" class="card-img-top img-size" alt="changan">
+              <div class=" bg-white">
+                <h5 class="card-title fs-6 ms-3 me-3 pt-2">32 000 AZN</h5>
+                <h5 class="card-text fs-6 ms-3 me-3">Changan Qiyuan Q05</h5>
+                <p class="card-text fs-6 ms-3 me-3">2024, 1.5 L, 2 000 km</p>
+                <button type="button" class="btn btn btn-primary btn-sm mb-3 ms-3">Call</button>
+              </div>
+            </div>
+          </div>
+          <div class="col p-2 mb-2">
+            <div class="card w-100 h-100">
+              <img src="changan_qiyuan_Q05.jpg" class="card-img-top img-size" alt="changan">
+              <div class=" bg-white">
+                <h5 class="card-title fs-6 ms-3 me-3 pt-2">32 000 AZN</h5>
+                <h5 class="card-text fs-6 ms-3 me-3">Changan Qiyuan Q05</h5>
+                <p class="card-text fs-6 ms-3 me-3">2024, 1.5 L, 2 000 km</p>
+                <button type="button" class="btn btn btn-primary btn-sm mb-3 ms-3">Call</button>
+              </div>
+            </div>
+          </div>
+          <div class="col p-2 mb-2">
+            <div class="card w-100 h-100">
+              <img src="changan_qiyuan_Q05.jpg" class="card-img-top img-size" alt="changan">
               <div class=" bg-white">
                 <h5 class="card-title fs-6 ms-3 me-3 pt-2">32 000 AZN</h5>
                 <h5 class="card-text fs-6 ms-3 me-3">Changan Qiyuan Q05</h5>
@@ -251,23 +379,19 @@ body{
     </section>
   </main>
 
-  <footer class="container-fluid" style="background-color: #ffffff;">
-    <div class="container-fluid ">
-      <div class="container-fluid d-sm-block justiy-content-start ">
-
-        <img src="lexus.svg" alt="lexsus">
-        <img src="mercedes.svg" alt="mercedes">
-        <img src="tesla.svg" alt="tesla">
-      </div>
-      <div class="container  gap-3  d-flex  justify-content-sm-end justify-content-start" style="height: 30px;">
-        <img style="cursor: pointer;" src="facebook_con.svg" alt="facebook">
-        <img style="cursor: pointer;" src="Google.svg" alt="whatsapp">
-        <img style="cursor: pointer;" src="Apple.svg" alt="instagram">
-        <img style="cursor: pointer;" src="Twitter_icon.svg" alt="twitter">
+  <footer class="container-fluid d-flex flex-column w-100 h-100" style="background-color: #ffffff; ">
+    <div class="container-fluid " style="height: 100px;">
+      
+      <div class="container  gap-2  d-flex  justify-content-sm-end justify-content-start" style="margin-top: 20px;">
+        <a href="https://www.facebook.com/"><img style="cursor: pointer; width: 30px; height: 30; " src="facebook_con.svg"  alt="facebook"></a>
+        <a href="https://www.Google.com/"><img style="cursor: pointer; width: 30px; height: 30;" src="Google.svg" alt="whatsapp"></a>
+        <a href="https://www.Instagram.com/"><img style="cursor: pointer; width: 30px; height: 30;" src="icons8-instagram.svg" alt="instagram"></a>
+        <a href="https://www.Twitter.com/"><img style="cursor: pointer; width: 30px; height: 30;" src="Twitter_icon.svg" alt="twitter"></a>
       </div>
 
-      <p class=" text-center  text-black">2024 &copy; All rights reserved</p>
+      
     </div>
+    <p class=" text-center  text-black">2024 &copy; All rights reserved</p>
   </footer>
   <script>
     let darkmode = localStorage.getItem('darkmode')
