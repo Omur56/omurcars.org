@@ -140,6 +140,143 @@ width: 100%;
 }
 
 
+
+.container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .car-info {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            display: none;
+            text-align: center;
+        }
+        .car-info img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .slider {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            white-space: nowrap;
+            padding: 10px;
+        }
+        .slider button {
+            flex: 0 0 auto;
+            width: 150px;
+        }
+        .slider-container .prev, .slider-container .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        /* Slider işarələrini gizlətmək */
+        .slider-container .prev, .slider-container .next {
+            display: none;
+        }
+
+        /* Yeni funksionallıq üçün əlavə class */
+        .slider-btn-focus {
+            background-color: #FA5252;
+            color: white;
+        }
+
+
+
+        .model_catagory {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .model_catagory button {
+            width: 70px;
+            height: 20px;
+            font-size: 14px;
+            padding: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .model_catagory button img {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Fokuslanmış düymə üçün stil */
+        .slider-btn-focus {
+            background-color: #FA5252;
+            color: white;
+            border: 2px solid #FA5252;
+        }
+
+        /* Slider funksionallığı */
+        .model_catagory .slider-container {
+            position: relative;
+            overflow-x: auto;
+            display: flex;
+            gap: 10px;
+            scroll-behavior: smooth;
+            padding: 10px;
+        }
+
+        .model_catagory .slider-container::-webkit-scrollbar {
+            display: none;
+        }
+
+
+
+
+        .model_catagory {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .model_catagory button {
+            width: 80px;
+            height: 80px;
+            font-size: 12px;
+            padding: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .model_catagory button img {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 10px;
+            justify-content: center;
+        }
+
+        /* Fokuslanmış düymə üçün stil */
+        .color_markalar_btn_focus {
+            background-color: #ffcc00;
+            color: white;
+            border: 2px solid #FA5252;
+        }
+
 .container {
             display: flex;
             flex-direction: column;
@@ -205,8 +342,46 @@ width: 100%;
        
 @media screen and (max-width: 768px) {
 
+  .model_catagory button {
+                width: 70px;
+                height: 60px;
+                font-size: 12px;
+            }
+
+            .model_catagory button img {
+                width: 15px;
+                height: 10px;
+            }
+
+
+  .model_catagory button {
+                width: 70px;
+                height: 60px;
+                font-size: 12px;
+            }
+
+            .model_catagory button img {
+                width: 20px;
+                height: 20px;
+            }
+
+  .slider {
+                overflow-x: scroll;
+                scroll-snap-type: x mandatory;
+            }
+            .slider button {
+                width: 120px;
+                font-size: 10px;
+            }
+            .slider-container .prev, .slider-container .next {
+                font-size: 12px;
+            }
+
+
+
+
   .btn-model {
-                font-size: 14px;
+                font-size: 10px;
                 padding: 8px 12px;
             }
 
@@ -302,7 +477,40 @@ width: 100%;
   </header>
   <menu class="container-fluid ">
     <div class="container-fluid  ">
-      <div class="model_catagory d-flex gap-lg-1 justify-content-center align-items-center d-grid">
+
+      <div class="container">
+        <div class="car-info" id="car-info">
+            <img id="car-image" src="" alt="Car Image">
+            <h3 id="car-title"></h3>
+            <p id="car-description"></p>
+        </div>
+        <div class="slider-container">
+            <button class="prev" onclick="slide(-1)">&#10094;</button>
+            <div class="slider" id="slider">
+                <button type="button" class="btn btn-light" onclick="highlightButton(this)">
+                    <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/merchant-account.png" alt="merchant-account"/>&nbsp;&nbsp;Kredit
+                </button>
+                <button type="button" class="btn btn-light" onclick="highlightButton(this)">
+                    <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/refresh--v1.png" alt="refresh--v1"/>&nbsp;&nbsp;Barter
+                </button>
+                <button type="button" class="btn btn-light" onclick="highlightButton(this)">
+                    <img width="23" height="23" src="https://img.icons8.com/ios-filled/50/FA5252/dog-tag.png" alt="dog-tag"/>&nbsp;&nbsp;Aksesuarlar
+                </button>
+                <button type="button" class="btn btn-light" onclick="highlightButton(this)">
+                    <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/open-end-wrench.png" alt="open-end-wrench"/>&nbsp;&nbsp;Ehtiyyat Hissələri
+                </button>
+                <button type="button" class="btn btn-light" onclick="highlightButton(this)">
+                    <img width="20" height="20" src="https://img.icons8.com/ink/48/FA5252/wheel.png" alt="wheel"/>&nbsp;&nbsp;Təkərlər
+                </button>
+                <button type="button" class="btn btn-light" onclick="highlightButton(this)">
+                    <img width="20" height="20" src="https://img.icons8.com/external-obvious-line-kerismaker/48/FA5252/external-accessories-car-auto-parts-line-obvious-line-kerismaker-6.png" alt="external-accessories-car-auto-parts-line-obvious-line-kerismaker-6"/>&nbsp;&nbsp;Şinlər
+                </button>
+            </div>
+            <button class="next" onclick="slide(1)">&#10095;</button>
+        </div>
+    </div>
+
+      <!-- <div class="model_catagory d-flex gap-lg-1 justify-content-center align-items-center d-grid">
         <div class="container-fluid d-flex gap-lg-1 justify-content-center align-items-center d-grid  ">
           <button type="button" class="btn btn-light w-25 h-25 "><img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/merchant-account.png" alt="merchant-account"/>&nbsp;&nbsp;Kredit</button>
           <button type="button" class="btn btn-light w-25 h-25 "><img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/refresh--v1.png" alt="refresh--v1"/>&nbsp;&nbsp;Barter</button>
@@ -312,11 +520,11 @@ width: 100%;
           <button type="button" class="btn btn-light w-25 h-25 "><img width="20" height="20" src="https://img.icons8.com/external-obvious-line-kerismaker/48/FA5252/external-accessories-car-auto-parts-line-obvious-line-kerismaker-6.png" alt="external-accessories-car-auto-parts-line-obvious-line-kerismaker-6"/>&nbsp;&nbsp;Şinlər</button>
           
       </div>
-      </div>
+      </div> -->
       <div class="container-fluid row row-cols-1 row-cols-md-3 g-4  markalar_btn color_markalar_btn  ">
         
         <div class="container-fluid model_catagory">
-          <div class="model_catagory">
+          <!-- <div class="model_catagory">
           <div class="container-fluid model_catagory  d-flex gap-2 justify-content-center align-items-center d-grid">
             <button type="button" class="btn btn-light w-25 h-25 "><img width="20" height="20" src="https://img.icons8.com/glyph-neue/64/FA5252/car.png" alt="car"/>&nbsp;&nbsp;Avtomobil</button>
             <button type="button" class="btn btn-light w-25 h-25 "><img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/motorcycle.png" alt="motorcycle"/>&nbsp;&nbsp;Motoskilet</button>
@@ -325,14 +533,55 @@ width: 100%;
             <button type="button" class="btn btn-light w-25 h-25 "><img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/truck.png" alt="truck"/>&nbsp;&nbsp;Yük maşını</button>
           
            
-          </div>
-          <div class="container-fluid d-flex gap-2 model_catagory d-grid">
+          </div> -->
+
+          <div class="slider-container">
+            <button type="button" class="btn btn-light" onclick="highlightButton(this)">
+                <img width="20" height="20" src="https://img.icons8.com/glyph-neue/64/FA5252/car.png" alt="car"/>&nbsp;&nbsp;Avtomobil
+            </button>
+            <button type="button" class="btn btn-light" onclick="highlightButton(this)">
+                <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/motorcycle.png" alt="motorcycle"/>&nbsp;&nbsp;Motoskilet
+            </button>
+            <button type="button" class="btn btn-light" onclick="highlightButton(this)">
+                <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/bus.png" alt="bus"/>&nbsp;&nbsp;Avtobus
+            </button>
+            <button type="button" class="btn btn-light" onclick="highlightButton(this)">
+                <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/tractor.png" alt="tractor"/>&nbsp;&nbsp;Traktor
+            </button>
+            <button type="button" class="btn btn-light" onclick="highlightButton(this)">
+                <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/truck.png" alt="truck"/>&nbsp;&nbsp;Yük maşını
+            </button>
+        </div>
+
+
+
+        <div class="container-fluid model_catagory d-flex gap-2 d-grid">
+          <button type="button" class="btn btn-light color_markalar_btn" onclick="highlightButton(this)">
+              <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/suv.png" alt="suv"/>&nbsp;&nbsp;SUV
+          </button>
+          <button type="button" class="btn btn-light color_markalar_btn" onclick="highlightButton(this)">
+              <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/sedan.png" alt="sedan"/>&nbsp;&nbsp;Sedan
+          </button>
+          <button type="button" class="btn btn-light color_markalar_btn" onclick="highlightButton(this)">
+              <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/hatchback.png" alt="hatchback"/>&nbsp;&nbsp;Hatchback
+          </button>
+          <button type="button" class="btn btn-light color_markalar_btn" onclick="highlightButton(this)">
+              <img width="28" height="28" src="https://img.icons8.com/external-goofy-solid-kerismaker/96/FA5252/external-Hatchback-transportation-obvious-glyph-kerismaker.png" alt="external-Hatchback-transportation-obvious-glyph-kerismaker"/>&nbsp;&nbsp;Krossover
+          </button>
+          <button type="button" class="btn btn-light color_markalar_btn" onclick="highlightButton(this)">
+              <img width="25" height="25" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FA5252/external-van-camping-icongeek26-glyph-icongeek26.png" alt="external-van-camping-icongeek26-glyph-icongeek26"/>&nbsp;&nbsp;Miniven
+          </button>
+      </div>
+
+
+
+          <!-- <div class="container-fluid d-flex gap-2 model_catagory d-grid">
             <button type="button" class="btn btn-light w-25 h-25 color_markalar_btn "><img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/suv.png" alt="suv"/>&nbsp;&nbsp;SUV</button>
             <button type="button" class="btn btn-light w-25 h-25 color_markalar_btn "><img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/sedan.png" alt="sedan"/>&nbsp;&nbsp;Sedan</button>
             <button type="button" class="btn btn-light w-25 h-25 color_markalar_btn "><img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FA5252/hatchback.png" alt="hatchback"/>&nbsp;&nbsp;Hatchback</button>
             <button type="button" class="btn btn-light w-25 h-25 color_markalar_btn "><img width="28" height="28" src="https://img.icons8.com/external-goofy-solid-kerismaker/96/FA5252/external-Hatchback-transportation-obvious-glyph-kerismaker.png" alt="external-Hatchback-transportation-obvious-glyph-kerismaker"/>&nbsp;&nbsp;Krossover</button>
             <button type="button" class="btn btn-light w-25 h-25 color_markalar_btn "><img width="25" height="25" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FA5252/external-van-camping-icongeek26-glyph-icongeek26.png" alt="external-van-camping-icongeek26-glyph-icongeek26"/>&nbsp;&nbsp;Miniven</button>
-          </div>
+          </div> -->
         </div>
          
         
@@ -618,6 +867,57 @@ width: 100%;
             document.getElementById('car-description').textContent = car.description;
             document.getElementById('car-info').style.display = 'block';
         }
+
+
+
+
+
+
+
+
+
+
+        function slide(direction) {
+            const slider = document.getElementById('slider');
+            slider.scrollBy({ left: direction * 150, behavior: 'smooth' });
+        }
+
+        // Funksiya düyməni işarələmək üçün
+        function highlightButton(button) {
+            // Bütün düymələrin class-larını silirik
+            let buttons = document.querySelectorAll('.slider button');
+            buttons.forEach(btn => btn.classList.remove('slider-btn-focus'));
+            
+            // Seçilmiş düyməyə fokus əlavə edirik
+            button.classList.add('slider-btn-focus');
+        }
+
+
+
+
+
+                // Funksiya seçilən düyməni vurulmuş göstərmək üçün
+                function highlightButton(button) {
+            // Bütün düymələrin class-larını silirik
+            let buttons = document.querySelectorAll('.model_catagory button');
+            buttons.forEach(btn => btn.classList.remove('slider-btn-focus'));
+            
+            // Seçilmiş düyməyə fokus əlavə edirik
+            button.classList.add('slider-btn-focus');
+        }
+
+
+ // Funksiya seçilən düyməni vurulmuş göstərmək üçün
+ function highlightButton(button) {
+            // Bütün düymələrin class-larını silirik
+            let buttons = document.querySelectorAll('.model_catagory button');
+            buttons.forEach(btn => btn.classList.remove('color_markalar_btn_focus'));
+            
+            // Seçilmiş düyməyə fokus əlavə edirik
+            button.classList.add('color_markalar_btn_focus');
+        }
+
+
 </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
