@@ -56,37 +56,8 @@ body{
     display: flex;
     
 }
-.catalog{
-  height: 30px;
-  display: flex;
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--text-color);
-  text-decoration: none;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  
-  
-}
-.catalog a{
-  text-decoration: underline;
-    color:#040404;
-}
-.catalog a:active{
-  text-decoration:underline;
-    color:#ffcc00;
-}
-.catalog a:hover{
-  text-decoration: underline;
-    color:#ffcc00;
-}
 
-.catalog a:focus{
-  text-decoration: underline;
-    color:#ffcc00;
-}
+
 .img-size{
   width: 100%;
   height: 150px;
@@ -102,8 +73,143 @@ body{
   
 }
 
+.model_catagory{
+  width: 100%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.model_catagory button{
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.model_catagory button:hover{
+  background-color: var(--base-variant);
+  color: var(--text-color);
+}
+.model_catagory button:active{
+  background-color: var(--base-variant);
+  color: var(--text-color);
+}
+.model_catagory button:focus{
+  background-color: #ffcc00;
+  color: var(--text-color);
+}
+.color_markalar_btn:focus{
+  background-color: #ffcc00;
+  color: var(--text-color);
 
+}
+.color_markalar_btn{
+  margin-top: 10px;
+  gap: 10px;
+  
+ 
+}
+
+.color_btn_avtomobiller:focus{
+  background-color: #ffcc00;
+  color: var(--text-color);
+
+}
+
+.avtomobil_model{
+width: 100%;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  
+
+}
+.avtomobiller_div{
+  width: 100%;
+  height: 30px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.catagory_btn{
+  width: 50px;
+  height: 30px;
+  font-size: 12px;
+}
+
+
+.container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .car-info {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            display: none;
+            text-align: center;
+        }
+        .car-info img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .dropdown-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ffcc00ff;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .btn-model {
+            padding: 10px 15px;
+            border: none;
+            background-color: #ffcc00;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .btn:disabled {
+            background-color: #ffcc00;
+            cursor: not-allowed;
+        }
+        
+       
 @media screen and (max-width: 768px) {
+
+  .btn-model {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+
   .card_sales{
     background-color: var(--base-color);
   }
@@ -133,21 +239,25 @@ body{
   
   
 }
+.avtomobiller_div{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
 
 
 }
 </style>
-
+<body style="background-color: #efefef;">
   <header>
   
 
     <nav class="navbar bg-warning">
-      <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <body style="background-color: #efefef;">
+      
        
         <div>
         
@@ -191,18 +301,80 @@ body{
     </nav>
   </header>
   <menu class="container-fluid d-flex">
-    <div class="container-fluid  catalog ">
-    <ol class="container-fluid catalog">
-     <a class="breadcrumb" href="#">Kredit</a>
-     <a class="breadcrumb" href="#">Barter</a>
-     <a class="breadcrumb" href="#">Aksesuarlar</a>
-     <a class="breadcrumb" href="#">Ehtiyyat hissələri</a>
-     <a class="breadcrumb" href="#">Təkərlər</a>
-      <a class="breadcrumb" href="#">Şinlər</a>
+    <div class="container-fluid  ">
+      <div class="model_catagory ">
+        <div class="container-fluid d-flex gap-2 justify-content-center align-items-center  ">
+          <button type="button" class="btn btn-light btn-sm">Kredit</button>
+          <button type="button" class="btn btn-light btn-sm">Barter</button>
+          <button type="button" class="btn btn-light btn-sm">Aksesuarlar</button>
+          <button type="button" class="btn btn-light btn-sm ">Ehtiyyat Hissələri</button>
+          <button type="button" class="btn btn-light btn-sm">Təkərlər</button>
+          <button type="button" class="btn btn-light btn-sm">Şinlər</button>
+          
+      </div>
+      </div>
+      <div class="container-fluid row row-cols-1 row-cols-md-3 g-4  markalar_btn color_markalar_btn  ">
+        
+        <div class="container-fluid model_catagory">
+          <div class="model_catagory">
+          <div class="container-fluid model_catagory  d-flex gap-2 justify-content-center align-items-center">
+            <button type="button" class="btn btn-light btn-sm">Avtomobil</button>
+            <button type="button" class="btn btn-light btn-sm">Motoskilet</button>
+            <button type="button" class="btn btn-light btn-sm">Avtobus</button>
+            <button type="button" class="btn btn-light btn-sm">Traktor</button>
+            <button type="button" class="btn btn-light btn-sm">Yük maşını</button>
+          
+           
+          </div>
+        </div>
+         
+        
+        
+        <div class="container-fluid d-flex  justify-content-center align-items-center model_catagory">
+    
+        
+        <div class="container">
+          <div class="car-info" id="car-info">
+              <img id="car-image" src="" alt="Car Image">
+              <h3 id="car-title"></h3>
+              <p id="car-description"></p>
+          </div>
+          <div class="dropdown-container">
+              <div class="dropdown">
+                  <button class="btn-model" id="brand-btn">Markalar</button>
+                  <div class="dropdown-content" id="brand-list">
+                      <a href="#" onclick="selectBrand('BMW')">BMW</a>
+                      <a href="#" onclick="selectBrand('Mercedes')">Mercedes</a>
+                      <a href="#" onclick="selectBrand('Lexus')">Lexus</a>
+                      <a href="#" onclick="selectBrand('Toyota')">Toyota</a>
+                  </div>
+              </div>
+              <div class="dropdown">
+                  <button class="btn-model" id="model-btn" disabled>Model</button>
+                  <div class="dropdown-content" id="model-list"></div>
+              </div>
+              <div class="dropdown">
+                  <button class="btn-model" id="year-btn" disabled>İl</button>
+                  <div class="dropdown-content" id="year-list"></div>
+              </div>
+          </div>
+      </div>
+
+
+      </div>
+        <div class="container-fluid d-flex gap-2 model_catagory">
+          <button type="button" class="btn btn-light btn-sm color_markalar_btn">SUV</button>
+          <button type="button" class="btn btn-light btn-sm color_markalar_btn">Sedan</button>
+          <button type="button" class="btn btn-light btn-sm color_markalar_btn">Hatchback</button>
+          <button type="button" class="btn btn-light btn-sm color_markalar_btn">Krossover</button>
+          <button type="button" class="btn btn-light btn-sm color_markalar_btn">Miniven</button>
+        </div>
+      </div>
       
-    </ol>
+    </div>
+    </div>
   </menu>
-  <sidebar>
+  <!-- <sidebar>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <div class="carousel-indicators ">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -232,7 +404,7 @@ body{
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-  </sidebar>
+  </sidebar> -->
 
   <main>
     <section class="sale">
@@ -393,26 +565,58 @@ body{
     </div>
     <p class=" text-center  text-black">2025 &copy; All rights reserved <br>Bütün Hüquqalar Qorunur</p>
   </footer>
+ 
+
   <script>
-    let darkmode = localStorage.getItem('darkmode')
-const themeSwitch = document.getElementById('theme-switch')
+   const modelData = {
+            'BMW': [{ model: 'X5', year: 2020, image: 'x5.jpg', description: 'BMW X5 lüks SUV modelidir.' }, { model: 'M3', year: 2018, image: 'BMW_X7.jpg ', description: 'BMW M3 güclü idman sedanıdır.' }],
+            'Mercedes': [{ model: 'C-Class', year: 2019, image: 'cclass.jpg', description: 'Mercedes C-Class rahat və dəbli sedan modelidir.' }, { model: 'E-Class', year: 2021, image: 'eclass.jpg', description: 'Mercedes E-Class biznes sinifində olan lüks avtomobildir.' }],
+            'Lexus': [{ model: 'RX', year: 2022, image: 'rx.jpg', description: 'Lexus RX premium SUV modelidir.' }, { model: 'NX', year: 2017, image: 'nx.jpg', description: 'Lexus NX kompakt premium SUV-dur.' }],
+            'Toyota': [{ model: 'Corolla', year: 2016, image: 'corolla.jpg', description: 'Toyota Corolla dünyada ən çox satılan sedan modelidir.' }, { model: 'Camry', year: 2015, image: 'camry.jpg', description: 'Toyota Camry rahat və uzunömürlü sedan modelidir.' }]
+        };
 
+        let selectedBrand = null;
+        let selectedModel = null;
+        let selectedYear = null;
 
-const enableDarkmode = () => {
-document.body.classList.add('darkmode')
-localStorage.setItem('darkmode', 'active')
-}
-const disableDarkmode = () => {
-document.body.classList.remove('darkmode')
-localStorage.setItem('darkmode', null)
-}
+        function selectBrand(brand) {
+            selectedBrand = brand;
+            selectedModel = null;
+            selectedYear = null;
+            document.getElementById('brand-btn').textContent = brand;
+            document.getElementById('model-btn').disabled = false;
+            document.getElementById('year-btn').disabled = true;
+            document.getElementById('model-list').innerHTML = '';
+            document.getElementById('year-list').innerHTML = '';
+            document.getElementById('car-info').style.display = 'none';
 
-if (darkmode === 'active') enableDarkmode()
+            modelData[brand].forEach(car => {
+                document.getElementById('model-list').innerHTML += `<a href='#' onclick="selectModel('${car.model}')">${car.model}</a>`;
+            });
+        }
 
-themeSwitch.addEventListener("click", () =>{
-darkmode = localStorage.getItem('darkmode')
-darkmode !== "active" ? enableDarkmode() : disableDarkmode()
-})
+        function selectModel(model) {
+            selectedModel = model;
+            selectedYear = null;
+            document.getElementById('model-btn').textContent = model;
+            document.getElementById('year-btn').disabled = false;
+            document.getElementById('year-list').innerHTML = '';
+            document.getElementById('car-info').style.display = 'none';
+
+            modelData[selectedBrand].filter(car => car.model === model).forEach(car => {
+                document.getElementById('year-list').innerHTML += `<a href='#' onclick="selectYear(${car.year})">${car.year}</a>`;
+            });
+        }
+
+        function selectYear(year) {
+            selectedYear = year;
+            document.getElementById('year-btn').textContent = year;
+            let car = modelData[selectedBrand].find(car => car.model === selectedModel && car.year === selectedYear);
+            document.getElementById('car-title').textContent = `${selectedBrand} ${selectedModel} (${selectedYear})`;
+            document.getElementById('car-image').src = car.image;
+            document.getElementById('car-description').textContent = car.description;
+            document.getElementById('car-info').style.display = 'block';
+        }
 </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
