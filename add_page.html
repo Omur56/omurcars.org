@@ -73,7 +73,6 @@
   </style>
 </head>
 <body>
-  <!-- FormSubmit action əlavə olunur -->
   <form action="https://formsubmit.co/omurabdullayev7@gmail.com" method="POST" enctype="multipart/form-data">
     
     <!-- Step 1: Bölmə seçimi -->
@@ -86,6 +85,10 @@
         <option value="elektronika">Elektronika</option>
         <option value="məişət">Məişət</option>
       </select>
+
+      <label for="username">Adınız</label>
+      <input type="text" id="username" name="username" placeholder="Adınızı daxil edin" required>
+
       <div class="clearfix">
         <button type="button" class="btn" onclick="nextStep(2)">Davam et</button>
       </div>
@@ -118,7 +121,7 @@
       <input type="number" id="mileage" name="mileage" placeholder="Yürüş">
 
       <label for="price">Qiymət (AZN)</label>
-      <input type="number" id="price" name="price" placeholder="Qiymət">
+      <input type="number" id="price" name="price" placeholder="Qiymət" required>
 
       <div class="clearfix">
         <button type="button" class="btn" onclick="nextStep(4)">Davam et</button>
@@ -132,6 +135,7 @@
       <input type="file" id="images" name="images[]" accept="image/*" multiple>
       <p>Ən çox 6 şəkil seçə bilərsiniz.</p>
       <div class="preview" id="imagePreview"></div>
+
       <div class="clearfix">
         <button type="submit" class="btn">Yadda saxla</button>
       </div>
