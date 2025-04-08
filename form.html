@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Elan Formu</title>
+</head>
+<body>
+  <h2>Elan Yerləşdir</h2>
+  <form action="submit.php" method="POST" enctype="multipart/form-data">
+    <label>Adınız:</label><br>
+    <input type="text" name="ad" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Ödəniş məbləği (AZN):</label><br>
+    <input type="number" name="odeme" required><br><br>
+
+    <label>Şəkil yüklə:</label><br>
+    <input type="file" name="image" accept="image/*" required><br><br>
+
+    <input type="submit" value="Elan Göndər">
+  </form>
+</body>
+</html>
