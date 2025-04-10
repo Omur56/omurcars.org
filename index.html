@@ -647,6 +647,32 @@ align-items: center;
   text-decoration: none;
   color:black;
 }
+
+/* message buton login */
+
+        
+        .login_reqistration_btn:hover {
+            background-color: #45a049;
+        }
+        .popup {
+            width: 50px;
+            height: 30px;
+            background-color: #4CAF50;
+            color: white;
+            display: none;
+            position: absolute;
+           
+            top: 50px;
+            left: 50%;
+            transform: translateX(-80%);
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 12px;
+        }
+        /* --end message login btn */
+
     @media screen and (max-width: 768px) {
 
       .login_reqistration_div{
@@ -802,7 +828,29 @@ align-items: center;
   height: 20px;
 }
 
+/* message buton login */
 
+        
+.login_reqistration_btn:hover {
+            background-color: #45a049;
+        }
+        .popup {
+            width: 50px;
+            height: 30px;
+            background-color: #4CAF50;
+            color: white;
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-80%);
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 12px;
+        }
+        /* --end message login btn */
     }
 
   </style>
@@ -811,9 +859,16 @@ align-items: center;
     <header>
       <div class="logo_div "><img class="logo" src="car_logo.svg" alt="car_logo" /></div>
       <div class="login_reqistration_div">
-        <a href="login.html" class="login_reqistration_btn fas fa-sign-in-alt">&nbsp;Daxil Ol</a>
-        <a href="registration.html" class="login_reqistration_btn fas fa-user-plus">&nbsp;Qeydiyyat</a>
-      </div>
+        <a href="#" class="login_reqistration_btn fas fa-sign-in-alt" id="loginButton">&nbsp;Daxil Ol</a>
+        <a href="#" class="login_reqistration_btn fas fa-user-plus" id="registerButton">&nbsp;Qeydiyyat</a>
+        
+      
+      <!-- <div class="login_reqistration_div">
+        <a href="#" class="login_reqistration_btn fas fa-sign-in-alt" id="loginButton">&nbsp;Daxil Ol</a>
+        <a href="#" class="login_reqistration_btn fas fa-user-plus" id="registerButton">&nbsp;Qeydiyyat</a>
+        <p id="message">Tezliklə</p> -->
+        <div class="popup" id="popupMessage">Tezliklə</div>
+    </div>
       <nav>
         <a href="#">Ana Səhifə</a>
         <a href="#">Haqqımızda</a>
@@ -832,24 +887,24 @@ align-items: center;
   
     <!-- Mobil alt menyu -->
     <div class="mobile-bottom-nav">
-      <a href="#">
+      <a href="index.html">
         <i class="fas fa-home"></i>
         <span>Ana</span>
       </a>
-      <a href="#">
+      <a href="login1.html">
         <i class="fas fa-heart"></i>
         <span>Sevimlilər</span>
       </a>
      
-      <a href="form.html">
+      <a href="login1.html">
         <i class="fas fa-plus-circle"></i>
         <span>Əlavə et</span>
       </a>
-      <a href="#">
+      <a href="login1.html">
         <i class="fas fa-search"></i>
         <span>Axtar</span>
       </a>
-      <a href="login.html">
+      <a  href="login1.html">
         <i class="fas fa-user"></i>
         <span>Profil</span>
       </a>
@@ -1063,6 +1118,8 @@ align-items: center;
         <div class="container-fluid card_sales">
           <div class="row row-cols-2 row-cols-md-4 g-1">
             <div class="col p-2 mb-2">
+
+
               <div  class="card w-100 h-100">
                 <img
                 src="BMW_X7.jpg "
@@ -1091,7 +1148,7 @@ align-items: center;
             <div class="col p-2 mb-2">
               <div class="card w-100 h-100">
                 <img
-                  src="images_car.jpeg"
+                  src="Lexus_RX_300.jpg"
                   class="card-img-top img-size"
                   alt="lexus"
                 />
@@ -1546,6 +1603,31 @@ const menuToggle = document.getElementById("menuToggle");
     closeMenu.addEventListener("click", () => {
       sideMenu.classList.remove("active");
     });
+
+
+    //login btn message ekrana melumat cixaran button
+ // Daxil ol düyməsi klik edildikdə
+ document.getElementById("loginButton").onclick = function() {
+            var popup = document.getElementById("popupMessage");
+            popup.style.display = "block";
+
+            // Pəncərə 3 saniyə sonra yox olacaq
+            setTimeout(function() {
+                popup.style.display = "none";
+            }, 3000); // 3 saniyə sonra pəncərə gizlənir
+        };
+
+        // Qeydiyyat düyməsi klik edildikdə
+        document.getElementById("registerButton").onclick = function() {
+            var popup = document.getElementById("popupMessage");
+            popup.style.display = "block";
+
+            // Pəncərə 3 saniyə sonra yox olacaq
+            setTimeout(function() {
+                popup.style.display = "none";
+            }, 3000); // 3 saniyə sonra pəncərə gizlənir
+        };
+   
     </script>
 
     <script
