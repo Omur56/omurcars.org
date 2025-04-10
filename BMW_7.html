@@ -1,29 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .bmw_div{
-            width: 100%;
-            height: 100vh;
-        }
-        .bmw_img{
-            width: 450px;
-            height:450px;
-        }
+      * {
+        margin: 0;
+        padding: 0 auto;
+        box-sizing: border-box;
+      }
+      header{
+        background-color: #4ba808;
+        display: flex;
+        height: 100px;
+      }
+      
+      .bmw_div {
+        margin: 0 auto;
+        padding: 0;
+        width: 850px;
+        height: 100vh;
+      }
+      .bmw_img {
+       
+        height: 450px;
+        align-items: center;
+        justify-content: center;
+      }
+      .logo_div {
+        display: block;
+        width: 50px;
+        height: 50px;
+      }
+      .logo_text{
+        font-size: 20px;
 
+      }
+      .logo_text {
+        margin: 0;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-decoration: none;
+        color: white;
+      }
+      .logo{
+        width: 100px;
+        height: 50px;
+      }
+      .header_nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  cursor: pointer;
+}
+.menyu_header_nav:active{
+    outline: none;
+    background-color: #0986ed;
+}
+
+
+.menyu_header_nav {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  
+  transition: background-color 0.3s;
+}
+.header_nav{
+    margin: 70px 100px;
+}
+
+.menyu_header_nav:hover {
+  background-color: #0986ed;
+  border-radius: 4px;
+}
+
+.bmw_x5{
+    width: 500px;
+    height: 450px;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.column {
+  float: left;
+  width: 200px;
+  padding: 10px;
+  height: 20px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.table_info_car{
+    
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+    
+    
+}
+
+.bmw_div{
+    width: 500px;
+    height: 1550px;
+    display: block;
+    justify-content: center;
+    align-items:center;
+}
+.line_bmw{
+    border-bottom: 1px solid #ccc;
+}
+/* Mobil cihazlar üçün responsive dizayn */
+@media screen and (max-width: 768px) {
+  .header_nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-top: 50px;
+  }
+
+  .menyu_header_nav {
+    padding: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    
+  }
+  .bmw_x5{
+    width: 350px;
+    height: 250px;
+}
+.header_nav{
+display: block;
+
+}
+.header_nav{
+    display: none;
+}
+.table_info_car{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    align-items:center;
+}
+
+}
+     
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <div class="logo_div container-fluid">
+        <a href="index.html"
+          ><img class="logo" src="car_logo.svg" alt="car_logo" /></a
+        ><a href="index.html" class="logo_text">OmurCars.org</a>
+      </div>
+      <div class="div_header container-fluid">
+        <nav class="header_nav">
+          <ul>
+            <li><a class="menyu_header_nav" href="index.html">Bütün Elanlar</a></li>
+            <li><a class="menyu_header_nav">Ehtiyyat Hissələri</a></li>
+            <li><a class="menyu_header_nav">Kataloq</a></li>
+            <li><a class="menyu_header_nav">Aksesuarlar</a></li>
+            <li><a class="menyu_header_nav">İcarə</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+
+ 
     <div class="bmw_div">
-        <img class="bmw_img" src="BMW_X7.jpg" alt="BMW X7">
+      
+        <div class="bmw_divider ">
+            <a href="#" class="bmw_divider_link">BMW</a>
+            <a href="#" class="model_x5">X7</a>
+            <h1>BMW X5, 3.0 L, 2021 il, 58 000 km</h1>
+            <img class="bmw_x5" src="bmw-x-series-x7-sp-desktop.jpg" alt=""/>
+            <div class="description_p ">
+                <p>BMW X5, 3.0 L, 2021 il</p>
+                <p>58 000 km</p>
+                <div class="line_bmw"></div>
+            </div>
+        </div>
+    
+        
+    
+    <div class="table_info_car">
+   
+<div class="row">
+    <div class="column">
+      <p>Şəhər</p>
+      <p>Marka</p>
+      <p>Model</p>
+      <p>Buraxılış ili</p>
+      <p>Ban növü</p>
+      <p>Rəng</p>
+      <p>Mühərrik</p>
+      <p>Yürüş</p>
     </div>
-</body>
+    <div class="column" >
+      <p>Baki</p>
+      <p><a class="bmw_x7" href="BMW_7.html">BMW</a></p>
+      <p><a class="bmw_x5" href="BMW_X5.html">X7</a></p>
+      <p><a class="year_car" href="#">2022</a></p>
+      <p>Offroader / SUV, 5 qapı</p>
+      <p>Qara</p>
+      <p>3.0 L / 340 a.g. / Benzin</p>
+      <p>50 000 km</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column" >
+      <p>Sürətlər qutusu</p>
+      <p>Ötürücü</p>
+      <p>Yeni</p>
+      <p>Sahiblər</p>
+      <p>Vəziyyəti</p>
+      <p>Hansı bazar üçün yığılıb</p>
+    </div>
+    <div class="column">
+      <p>Avtomat</p>
+      <p>Tam</p>
+      <p>Xeyir</p>
+      <p>0</p>
+      <p>Vuruğu yoxdur, rənglənməyib</p>
+      <p>Amerika</p>
+    
+    </div>
+  </div>
+</div>   
+<div class="line_bmw"></div>  
+</div>
+</main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+  </body>
 </html>

@@ -7,7 +7,9 @@
     <title lang="ru">Продажа автомобилей</title>
     <title lang="tr">Otomobil Satışı</title>
     <meta name="theme-color" content="#2ecc71" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-vAIwYcv4XbUADP+5hBnraHZcUGWxuUeK4rFJ9LurhC9zG6wxQxQZPpB7DQzvM60Rp6aDrhR1QHkh6CvUJzLkfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="navbarstyle.css">
     <link rel="icon" href="autosales-logo_20448-71.avif" type="image/svg+xml" />
     <meta
       name="description"
@@ -19,7 +21,7 @@
     />
     <meta
       name="author"
-      content="masin satisi avto sale masin alqi satqisi yeni masinlar ikinci el masinlar afto salonlar avto maşın satışı "
+      content="masin satisi avto sale masin alqi satqisi yeni masinlar ikinci el masinlar afto salonlar avto maşın satışı omurcar.org omurcars.org"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Auto Sales</title>
@@ -57,18 +59,10 @@
       background-color: var(--base-color);
       color: var(--text-color);
     }
+   
 
-    .logo {
-      width: 200px;
-      height: 100px;
-    }
-.login_reqistration_div{
-  display: flex;
-  font-size: 8px;
-  gap: 10px;
-  margin-left: 50%;
-  
-}
+    
+
     .img-size {
       width: 100%;
       height: 200px;
@@ -86,7 +80,10 @@
       overflow: hidden;
       
     }
-
+.vip-elanlar-text{
+  font-size: 24px;
+  margin-left: 10px;
+}
     .model_catagory {
       width: 100%;
       display: block;
@@ -148,9 +145,9 @@
     }
 
     .container {
+      
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      
     }
     .car-info {
       width: 100%;
@@ -289,11 +286,7 @@
       border: 2px solid #fa5252;
     }
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    
     .car-info {
       width: 100%;
       max-width: 600px;
@@ -423,6 +416,84 @@
 .menu-katalog_nav li:hover {
   background-color: #f2f2f2;
 }
+
+
+.menu-katalog_nav_2 li a{
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* navbar 2 */
+#toggleBtn_2 {
+  display: block;
+  width: 50px;
+  height: 40px;
+  margin-left: 70%;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.sidebar-katalog_nav_2 {
+  
+  position: fixed;
+  top: 0;
+  right: -270px;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  transition:right 0.3s ease;
+  overflow-y: auto;
+  z-index: 999;
+  padding-top: 10px;
+  color: #000000;
+}
+
+.sidebar-katalog_nav_2.active {
+  right: 0;
+}
+
+#closeBtn_2 {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #444;
+  text-align: left;
+  width: 100%;
+}
+
+.menu-katalog_nav_2 {
+  list-style: none;
+  padding: 0 20px;
+}
+
+.menu-katalog_nav_2 li {
+  padding: 15px 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.menu-katalog_nav_2 li:hover {
+  background-color: #f2f2f2;
+}
+
+
+
+
+
+
+
 .vip-car-info{
   top: 0;
   right: 0;
@@ -430,22 +501,21 @@
   align-items: center;
   justify-content: center;
   width: 250px;
-  height: 200px;
+  height: 250px;
   background-color: #0f9d58;
   color: white;
-  font-size: 18px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.601);
+  font-size: 12px;
+  border-radius: 10px;
+
+  
 }
 #vip-car-image{
-  transform: translate(0, -20%);
+  transform: translate(0, -10%);
   width: 100%;
-  height: 100%;
+  height: 180px;
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 #vip-car-title,
 #vip-car-description,
@@ -483,7 +553,7 @@
   height: 25px;
   position: absolute;
   margin-right: -170px;
-  margin-top: -250px;
+  margin-top: -230px;
   font-weight: 400;
   font-size: 14px;
   background-color: rgb(255, 255, 255); /* yarı şəffaf fon */
@@ -523,9 +593,7 @@
 .btn {
   align-self: flex-start;
 }
-.vip-elanlar-text{
-  padding: 10px;
-}
+
 
 
 
@@ -538,16 +606,16 @@
 
 
 header {
+  height: 70px;
       background-color: #2ecc71;
       color: white;
-      padding: 1rem;
       display: flex;
-      justify-content: space-between;
       align-items: center;
     }
 
     .logo {
-      font-size: 1.5rem;
+     width: 150px;
+    
     }
 
     nav {
@@ -603,6 +671,150 @@ header {
     /* Mobil alt bar */
     .mobile-bottom-nav {
       display: none;
+      
+    }
+
+    .mobile-bottom-nav a {
+      display: flex;
+      
+    }
+
+    .mobile-bottom-nav span {
+      display: flex;
+      
+    }
+
+    .login_reqistration_btn{
+width: 50px;
+height: 50px;
+text-align: center;
+justify-content: center;
+align-items: center;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 15px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+ 
+ 
+}
+
+.img-vip{
+  width: 15px;
+  height: 15px;
+}
+.text_cart_link{
+  text-decoration: none;
+  color:black;
+}
+
+/* message buton login */
+
+        
+        .login_reqistration_btn:hover {
+            background-color: #45a049;
+        }
+        .popup {
+            width: 50px;
+            height: 30px;
+            background-color: #4CAF50;
+            color: white;
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-80%);
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 12px;
+        }
+        /* --end message login btn */
+.btn-primary {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+.logo_div{
+  display:flex;
+}
+.logo_text{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+@media screen and ( max-width: 360px) {
+
+#toggleBtn_2 {    
+
+margin: 0px 40px;
+font-size: 18px;
+cursor: pointer;
+background-color: #0f9d58;
+color: white;
+border: none;
+border-radius: 5px;
+}
+}
+
+
+@media screen and ( min-width: 390px) {
+
+#toggleBtn_2 {    
+
+margin: 0px 70px;
+font-size: 18px;
+cursor: pointer;
+background-color: #0f9d58;
+color: white;
+border: none;
+border-radius: 5px;
+
+
+}
+    
+}
+
+
+
+    @media screen and ( max-width: 768px) {
+    
+
+   
+
+
+      #toggleBtn_2 {
+ margin: 0px 29%;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #0f9d58;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+ 
+ 
+
+  .popup {
+    top: 40px;
+  }
+
+      
+/* Mobil alt bar */
+    .mobile-bottom-nav {
+      width: 100%;
+      height: 70px;
+      display: flex;
       position: fixed;
       bottom: 0;
       left: 0;
@@ -628,84 +840,6 @@ header {
     .mobile-bottom-nav span {
       font-size: 0.7rem;
     }
-    .login_reqistration_btn{
-width: 100px;
-height: 30px;
-text-align: center;
-justify-content: center;
-align-items: center;
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 10px;
-}
-
-.img-vip{
-  width: 15px;
-  height: 15px;
-}
-.text_cart_link{
-  text-decoration: none;
-  color:black;
-}
-
-/* message buton login */
-
-        
-        .login_reqistration_btn:hover {
-            background-color: #45a049;
-        }
-        .popup {
-            width: 50px;
-            height: 30px;
-            background-color: #4CAF50;
-            color: white;
-            display: none;
-            position: absolute;
-           
-            top: 50px;
-            left: 50%;
-            transform: translateX(-80%);
-            text-align: center;
-            line-height: 40px;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            font-size: 12px;
-        }
-        /* --end message login btn */
-.btn-primary {
-  background-color: #4CAF50;
-  border-color: #4CAF50;
-}
-    @media screen and (max-width: 768px) {
-
-      .login_reqistration_div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  font-size: 10px;
-  margin-left: 10%;
-  margin-top:0px;
-}
-
-
-      nav {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .mobile-bottom-nav {
-        display: flex;
-      }
-
 
 
 
@@ -793,7 +927,7 @@ margin-right: 350px;
         margin-bottom: 10px;
       }
      
-      .vip-car-text {
+.vip-car-text {
   width: 50px;
   height: 25px;
   position: absolute;
@@ -808,96 +942,90 @@ margin-right: 350px;
 }
 
 
-.login_reqistration{
-  display: flex;
- justify-content: center;
-  align-items: center;
- 
-  gap: 5px;
-
-}
 .logo{
   width: 100px;
   height: 50px;
 }
 
-.login_reqistration_btn{
-width: 100px;
-height: 30px;
-text-align: center;
-justify-content: center;
-align-items: center;
-  background-color: #4CAF50;
-  color: white;
-  padding:10px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 10px;
 
-}
 .icon-size{
   width: 20px;
   height: 20px;
 }
-
+    
 /* message buton login */
 
         
-.login_reqistration_btn:hover {
-            background-color: #45a049;
-        }
-        .popup {
-            width: 50px;
-            height: 30px;
-            background-color: #4CAF50;
-            color: white;
-            display: none;
-            position: absolute;
-            top: 50px;
-            left: 50%;
-            transform: translateX(-80%);
-            text-align: center;
-            line-height: 40px;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            font-size: 12px;
-        }
-        /* --end message login btn */
-    }
 
+    
+      
+
+}
+
+
+
+
+@media screen and ( min-width: 1366px) {
+
+#toggleBtn_2 {    
+
+margin: 0px 70%;
+font-size: 18px;
+cursor: pointer;
+background-color: #0f9d58;
+color: white;
+border: none;
+border-radius: 5px;
+
+
+}
+    
+}
+@media screen and ( min-width: 1536px) {
+
+#toggleBtn_2 {    
+
+margin: 0px 70%;
+font-size: 18px;
+cursor: pointer;
+background-color: #0f9d58;
+color: white;
+border: none;
+border-radius: 5px;
+
+
+}
+    
+}
   </style>
   <body>
       
-    <header>
-      <div class="logo_div "><img class="logo" src="car_logo.svg" alt="car_logo" /></div>
-      <div class="login_reqistration_div">
-        <a href="#" class="login_reqistration_btn fas fa-sign-in-alt" id="loginButton">&nbsp;Daxil Ol</a>
-        <a href="#" class="login_reqistration_btn fas fa-user-plus" id="registerButton">&nbsp;Qeydiyyat</a>
-        
+    
+     
       
-      <!-- <div class="login_reqistration_div">
-        <a href="#" class="login_reqistration_btn fas fa-sign-in-alt" id="loginButton">&nbsp;Daxil Ol</a>
-        <a href="#" class="login_reqistration_btn fas fa-user-plus" id="registerButton">&nbsp;Qeydiyyat</a>
-        <p id="message">Tezliklə</p> -->
-        <div class="popup" id="popupMessage">Tezliklə</div>
-    </div>
-      <nav>
-        <a href="#">Ana Səhifə</a>
-        <a href="#">Haqqımızda</a>
-        <a href="#">Əlaqə</a>
-      </nav>
+      <header>
+        <div class="logo_div "><a href="index.html"><img class="logo" src="car_logo.svg" alt="car_logo" /></a><a href="index.html" class="logo_text">OmurCars.org</a></div>
       
-      <div class="menu-toggle" id="menuToggle">☰</div>
-    </header>
+        <button id="toggleBtn_2">&#9776;</button>
+
+
+    <div class="sidebar-katalog_nav_2" id="sidebar_2">
+      
+      <button id="closeBtn_2">&times; Bağla</button>
   
-    <div class="side-menu" id="sideMenu">
-      <div class="close-btn" id="closeMenu">✖</div>
-      <a href="#">Ana Səhifə</a>
-      <a href="#">Haqqımızda</a>
-      <a href="#">Əlaqə</a>
+      <ul class="menu-katalog_nav_2">
+        <li><a href="index.html">Ana səhifə</a></li>
+        <li><a href="about.html">Haqqımızda</a></li>
+        <li><a href="contact.html">Əlaqə</a></li>
+        <li><button class="btn btn-lg "><i class="fa fa-sign-in" aria-hidden="true" href="login.html">Giriş</i></button></li>
+        <li><button class="btn btn-lg"><i class="fa fa-user-plus" aria-hidden="true" href="register.html">Qeydiyyat</i></button></li>
+      </ul>
     </div>
+
+       
+      </header>
+   
+  
   
     <!-- Mobil alt menyu -->
     <div class="mobile-bottom-nav">
@@ -1039,7 +1167,7 @@ align-items: center;
 
  
   <aside>
-    <h2 class="vip-elanlar-text">VIP Elanlar</h2>
+    <h2 class="vip-elanlar-text">VIP Elanlar:</h2>
     <div class="sidebar-content container-fluid d-flex ">
       
       <div class="vip-car-info container-fluid d-flex flex-column align-items-center" id="vip-car-info">
@@ -1605,45 +1733,25 @@ closeBtn.addEventListener("click", () => {
 });
 
 
-///naviqation bar hissesi
-const menuToggle = document.getElementById("menuToggle");
-    const sideMenu = document.getElementById("sideMenu");
-    const closeMenu = document.getElementById("closeMenu");
 
-    menuToggle.addEventListener("click", () => {
-      sideMenu.classList.add("active");
-    });
+const toggleBtn_2 = document.getElementById("toggleBtn_2");
+const closeBtn_2 = document.getElementById("closeBtn_2");
+const sidebar_2 = document.getElementById("sidebar_2");
 
-    closeMenu.addEventListener("click", () => {
-      sideMenu.classList.remove("active");
-    });
+toggleBtn_2.addEventListener("click", () => {
+  sidebar_2.classList.add("active");
+});
+
+closeBtn_2.addEventListener("click", () => {
+  sidebar_2.classList.remove("active");
+});
 
 
-    //login btn message ekrana melumat cixaran button
- // Daxil ol düyməsi klik edildikdə
- document.getElementById("loginButton").onclick = function() {
-            var popup = document.getElementById("popupMessage");
-            popup.style.display = "block";
 
-            // Pəncərə 3 saniyə sonra yox olacaq
-            setTimeout(function() {
-                popup.style.display = "none";
-            }, 3000); // 3 saniyə sonra pəncərə gizlənir
-        };
-
-        // Qeydiyyat düyməsi klik edildikdə
-        document.getElementById("registerButton").onclick = function() {
-            var popup = document.getElementById("popupMessage");
-            popup.style.display = "block";
-
-            // Pəncərə 3 saniyə sonra yox olacaq
-            setTimeout(function() {
-                popup.style.display = "none";
-            }, 3000); // 3 saniyə sonra pəncərə gizlənir
-        };
+     
    
     </script>
-
+<script src="navbarscript.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
