@@ -65,7 +65,7 @@
 
     .img-size {
       width: 100%;
-      height: 200px;
+      height: 160px;
       object-fit: cover;
       object-position: center;
       margin: 0;
@@ -75,9 +75,13 @@
       width: 70%;
       height: 50%;
       box-sizing: border-box;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       overflow: hidden;
+      
+    }
+    .card{
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s ease;
       
     }
 .vip-elanlar-text{
@@ -348,16 +352,16 @@
     }
     .sidebar-content{
       width: 100%;
-      
+      position: relative;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      gap: 10px;
-      padding: 50px;
-      background-color: var(--base-color);
+      gap: 1px;
+      padding: 10px;
+     
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
+      
+      
     }
 
     #toggleBtn {
@@ -684,22 +688,7 @@ header {
       
     }
 
-    .login_reqistration_btn{
-width: 50px;
-height: 50px;
-text-align: center;
-justify-content: center;
-align-items: center;
-  background-color: #4CAF50;
-  color: white;
-  padding: 15px 15px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  text-decoration: none;
  
- 
-}
 
 .img-vip{
   width: 15px;
@@ -708,6 +697,23 @@ align-items: center;
 .text_cart_link{
   text-decoration: none;
   color:black;
+}
+
+.add_elan{
+  width: 100px;
+  height: 30px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #0f9d58;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  left: 67%;
+  top: 20px;
+
 }
 
 /* message buton login */
@@ -748,11 +754,27 @@ align-items: center;
   color: white;
 }
 
+.add_elan_link{
+  text-decoration: none;
+  color: white;
+}
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+ 
+  transition: all 0.3s ease;
+}
 
-
+.line_div{
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
 
 
 @media screen and ( max-width: 360px) {
+ 
+
+
 
 #toggleBtn_2 {    
 
@@ -768,6 +790,7 @@ border-radius: 5px;
 
 
 @media screen and ( min-width: 390px) {
+
 
 #toggleBtn_2 {    
 
@@ -787,13 +810,17 @@ border-radius: 5px;
 
 
     @media screen and ( max-width: 768px) {
-    
-
-   
+.logo_text{
+  display: none;
+}
+.add_elan{
+  display: none;
+}
+ 
 
 
       #toggleBtn_2 {
- margin: 0px 29%;
+ margin: 0px 59%;
   font-size: 18px;
   cursor: pointer;
   background-color: #0f9d58;
@@ -894,8 +921,7 @@ margin-right: 350px;
         box-sizing: border-box;
         margin: 0 0px;
         padding: 0;
-        background-color: var(--base-color);
-        border-radius: 10px;
+        
       }
 
       .catalog {
@@ -908,7 +934,7 @@ margin-right: 350px;
 
       .img-size {
         width: 100%;
-        height: 150px;
+        height: 130px;
         object-fit: cover;
         object-position: center;
         margin: 0;
@@ -966,7 +992,7 @@ margin-right: 350px;
 
 
 @media screen and ( min-width: 1366px) {
-
+  
 #toggleBtn_2 {    
 
 margin: 0px 70%;
@@ -982,7 +1008,7 @@ border-radius: 5px;
     
 }
 @media screen and ( min-width: 1536px) {
-
+ 
 #toggleBtn_2 {    
 
 margin: 0px 70%;
@@ -1005,7 +1031,7 @@ border-radius: 5px;
       
       <header>
         <div class="logo_div "><a href="index.html"><img class="logo" src="car_logo.svg" alt="car_logo" /></a><a href="index.html" class="logo_text">OmurCars.org</a></div>
-      
+        <button class="add_elan btn btn-primary"  type="button"><a class="add_elan_link" href="add_form.html" >Elan&nbsp;ver</a></button>
         <button id="toggleBtn_2">&#9776;</button>
 
 
@@ -1017,8 +1043,8 @@ border-radius: 5px;
         <li><a href="index.html">Ana səhifə</a></li>
         <li><a href="about.html">Haqqımızda</a></li>
         <li><a href="contact.html">Əlaqə</a></li>
-        <li><button class="btn btn-lg "><i class="fa fa-sign-in" aria-hidden="true" href="login.html">Giriş</i></button></li>
-        <li><button class="btn btn-lg"><i class="fa fa-user-plus" aria-hidden="true" href="register.html">Qeydiyyat</i></button></li>
+        <li><button class="btn "><i class="fa fa-sign-in btn btn-primary" aria-hidden="true" href="login.html">&nbsp;&nbsp;Daxil ol</i></button></li>
+        <li><button class="btn"><i class="fa fa-user-plus btn btn-primary" aria-hidden="true" href="register.html">&nbsp;&nbsp;Qeydiyyat</i></button></li>
       </ul>
     </div>
 
@@ -1028,7 +1054,7 @@ border-radius: 5px;
   
   
     <!-- Mobil alt menyu -->
-    <div class="mobile-bottom-nav">
+    <div class="mobile-bottom-nav ">
       <a href="index.html">
         <i class="fas fa-home"></i>
         <span>Ana</span>
@@ -1038,15 +1064,15 @@ border-radius: 5px;
         <span>Sevimlilər</span>
       </a>
      
-      <a href="login1.html">
+      <a  href="login1.html">
         <i class="fas fa-plus-circle"></i>
         <span>Əlavə et</span>
       </a>
-      <a href="login1.html">
+      <a  href="login1.html">
         <i class="fas fa-search"></i>
         <span>Axtar</span>
       </a>
-      <a  href="login1.html">
+      <a   href="login1.html">
         <i class="fas fa-user"></i>
         <span>Profil</span>
       </a>
@@ -1259,7 +1285,7 @@ border-radius: 5px;
       <section class="sale">
         <div class="container-fluid card_sales">
           <div class="row row-cols-2 row-cols-md-4 g-1">
-            <div class="col p-2 mb-2 ">
+            <div class=" p-2 mb-2 ">
               
 
               <div  class="card w-100 h-100 ">
@@ -1275,12 +1301,16 @@ border-radius: 5px;
                   BMW X7, 3.0 L, 2020 il, 98 000 km
                 </h5>
                 <p class="card-text fs-6 ms-3">2020, 3.0 L<br />98 000 km</p>
-                <button
+                
+                <a href="BMW_7.html"><button
                   type="button"
                   class="btn btn btn-primary  btn-sm mb-3 ms-3"
                 >
-                  Call
-                </button>
+                Elana Bax
+                </button></a>
+                <p class="card-text fs-6 ms-3">Elan Nömrəsi № 1</p>
+             
+                
               </a>
               </div>
               
@@ -1295,6 +1325,7 @@ border-radius: 5px;
                   alt="lexus"
                 />
                 <div class="bg-white">
+                  <a class="text_cart_link" href="BMW_7.html">
                   <h5 class="card-title fs-6 ms-3 me-3 pt-2">48 500$</h5>
                   <h5 class="card-text fs-6 ms-3 me-3">
                     Lexus RX 300, 2.0 L, 2022 il, yeni
@@ -1303,12 +1334,16 @@ border-radius: 5px;
                     2022, 2.0 L<br />
                     0 km
                   </p>
-                  <button
+                  
+                  <a href="BMW_7.html"><button
                     type="button"
-                    class="btn btn btn-primary btn-sm mb-3 ms-3"
+                    class="btn btn btn-primary  btn-sm mb-3 ms-3"
                   >
-                    Call
-                  </button>
+                  Elana Bax
+                  </button></a>
+                  <p class="card-text fs-6 ms-3">Elan Nömrəsi № 2</p>
+                  
+                  </a>
                 </div>
               </div>
             </div>
@@ -1320,15 +1355,18 @@ border-radius: 5px;
                   alt="chery"
                 />
                 <div class="bg-white">
+                  <a class="text_cart_link" href="BMW_7.html">
                   <h5 class="card-title fs-6 ms-3 me-3 pt-2">44 900 AZN</h5>
                   <h5 class="card-text fs-6 ms-3 me-3">Chery eQ7</h5>
                   <p class="card-text fs-6 ms-3 me-3">2024 0 km</p>
-                  <button
+                  <a href="BMW_7.html"><button
                     type="button"
-                    class="btn btn btn-primary btn-sm mb-3 ms-3"
+                    class="btn btn btn-primary  btn-sm mb-3 ms-3"
                   >
-                    Call
-                  </button>
+                  Elana Bax
+                  </button></a>
+                  <p class="card-text fs-6 ms-3">Elan Nömrəsi № 3</p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1340,6 +1378,7 @@ border-radius: 5px;
                   alt="mercedess"
                 />
                 <div class="bg-white">
+                  <a class="text_cart_link" href="BMW_7.html">
                   <h5 class="card-title fs-6 ms-3 me-3 pt-2">51 000$</h5>
                   <h5 class="card-title fs-6 ms-3 me-3">
                     Mercedes G 63 AMG, 4.0 L, 2020 il, 31 000 km
@@ -1347,13 +1386,14 @@ border-radius: 5px;
                   <p class="card-text fs-6 ms-3 me-3">
                     2012, 5.5 L, 145 000 km
                   </p>
-                  <button
+                  <a href="BMW_7.html"><button
                     type="button"
-                    class="btn btn btn-primary btn-sm mb-3 ms-3"
-                    tel="+994559138099"
+                    class="btn btn btn-primary  btn-sm mb-3 ms-3"
                   >
-                    Call
-                  </button>
+                  Elana Bax
+                  </button></a>
+                  <p class="card-text fs-6 ms-3">Elan Nömrəsi № 4</p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1365,17 +1405,20 @@ border-radius: 5px;
                   alt="mercedess_sedan"
                 />
                 <div class="bg-white">
+                  <a class="text_cart_link" href="BMW_7.html">
                   <h5 class="card-title fs-6 ms-3 me-3 pt-2">29 500 AZN</h5>
                   <h5 class="card-text fs-6 ms-3 me-3">Mercedes E 220 D</h5>
                   <p class="card-text fs-6 ms-3 me-3">
                     2013, 2.2 L, 152 000 km
                   </p>
-                  <button
+                  <a href="BMW_7.html"><button
                     type="button"
-                    class="btn btn btn-primary btn-sm mb-3 ms-3"
+                    class="btn btn btn-primary  btn-sm mb-3 ms-3"
                   >
-                    Call
-                  </button>
+                  Elana Bax
+                  </button></a>
+                  <p class="card-text fs-6 ms-3">Elan Nömrəsi № 5</p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1387,15 +1430,18 @@ border-radius: 5px;
                   alt="changan"
                 />
                 <div class="bg-white">
+                  <a class="text_cart_link" href="BMW_7.html">
                   <h5 class="card-title fs-6 ms-3 me-3 pt-2">32 000 AZN</h5>
                   <h5 class="card-text fs-6 ms-3 me-3">Changan Qiyuan Q05</h5>
                   <p class="card-text fs-6 ms-3 me-3">2024, 1.5 L, 2 000 km</p>
-                  <button
+                  <a href="BMW_7.html"><button
                     type="button"
-                    class="btn btn btn-primary btn-sm mb-3 ms-3"
+                    class="btn btn btn-primary  btn-sm mb-3 ms-3"
                   >
-                    Call
-                  </button>
+                  Elana Bax
+                  </button></a>
+                  <p class="card-text fs-6 ms-3">Elan Nömrəsi № 6</p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1407,15 +1453,18 @@ border-radius: 5px;
                   alt="changan"
                 />
                 <div class="bg-white">
+                  <a class="text_cart_link" href="BMW_7.html">
                   <h5 class="card-title fs-6 ms-3 me-3 pt-2">32 000 AZN</h5>
                   <h5 class="card-text fs-6 ms-3 me-3">Changan Qiyuan Q05</h5>
                   <p class="card-text fs-6 ms-3 me-3">2024, 1.5 L, 2 000 km</p>
-                  <button
+                  <a href="BMW_7.html"><button
                     type="button"
-                    class="btn btn btn-primary btn-sm mb-3 ms-3"
+                    class="btn btn btn-primary  btn-sm mb-3 ms-3"
                   >
-                    Call
-                  </button>
+                  Elana Bax
+                  </button></a>
+                  <p class="card-text fs-6 ms-3">Elan Nömrəsi № 7</p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1427,15 +1476,18 @@ border-radius: 5px;
                   alt="changan"
                 />
                 <div class="bg-white">
+                  <a class="text_cart_link" href="BMW_7.html">
                   <h5 class="card-title fs-6 ms-3 me-3 pt-2">32 000 AZN</h5>
                   <h5 class="card-text fs-6 ms-3 me-3">Changan Qiyuan Q05</h5>
                   <p class="card-text fs-6 ms-3 me-3">2024, 1.5 L, 2 000 km</p>
-                  <button
+                  <a href="BMW_7.html"><button
                     type="button"
-                    class="btn btn btn-primary btn-sm mb-3 ms-3"
+                    class="btn btn btn-primary  btn-sm mb-3 ms-3"
                   >
-                    Call
-                  </button>
+                  Elana Bax
+                  </button></a>
+                  <p class="card-text fs-6 ms-3">Elan Nömrəsi № 8</p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1447,15 +1499,18 @@ border-radius: 5px;
                   alt="changan"
                 />
                 <div class="bg-white">
+                  <a class="text_cart_link" href="BMW_7.html">
                   <h5 class="card-title fs-6 ms-3 me-3 pt-2">32 000 AZN</h5>
                   <h5 class="card-text fs-6 ms-3 me-3">Changan Qiyuan Q05</h5>
                   <p class="card-text fs-6 ms-3 me-3">2024, 1.5 L, 2 000 km</p>
-                  <button
+                  <a href="BMW_7.html"><button
                     type="button"
-                    class="btn btn btn-primary btn-sm mb-3 ms-3"
+                    class="btn btn btn-primary  btn-sm mb-3 ms-3"
                   >
-                    Call
-                  </button>
+                  Elana Bax
+                  </button></a>
+                  <p class="card-text fs-6 ms-3">Elan Nömrəsi № 9</p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1467,15 +1522,18 @@ border-radius: 5px;
                   alt="changan"
                 />
                 <div class="bg-white">
+                  <a class="text_cart_link" href="BMW_7.html">
                   <h5 class="card-title fs-6 ms-3 me-3 pt-2">32 000 AZN</h5>
                   <h5 class="card-text fs-6 ms-3 me-3">Changan Qiyuan Q05</h5>
                   <p class="card-text fs-6 ms-3 me-3">2024, 1.5 L, 2 000 km</p>
-                  <button
+                  <a href="BMW_7.html"><button
                     type="button"
-                    class="btn btn btn-primary btn-sm mb-3 ms-3"
+                    class="btn btn btn-primary  btn-sm mb-3 ms-3"
                   >
-                    Call
-                  </button>
+                  Elana Bax
+                  </button></a>
+                  <p class="card-text fs-6 ms-3">Elan Nömrəsi № 10</p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1487,15 +1545,18 @@ border-radius: 5px;
                   alt="changan"
                 />
                 <div class="bg-white">
+                  <a class="text_cart_link" href="BMW_7.html">
                   <h5 class="card-title fs-6 ms-3 me-3 pt-2">32 000 AZN</h5>
                   <h5 class="card-text fs-6 ms-3 me-3">Changan Qiyuan Q05</h5>
                   <p class="card-text fs-6 ms-3 me-3">2024, 1.5 L, 2 000 km</p>
-                  <button
+                  <a href="BMW_7.html"><button
                     type="button"
-                    class="btn btn btn-primary btn-sm mb-3 ms-3"
+                    class="btn btn btn-primary  btn-sm mb-3 ms-3"
                   >
-                    Call
-                  </button>
+                  Elana Bax
+                  </button></a>
+                  <p class="card-text fs-6 ms-3">Elan Nömrəsi № 11</p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1507,15 +1568,18 @@ border-radius: 5px;
                   alt="changan"
                 />
                 <div class="bg-white">
+                  <a class="text_cart_link" href="BMW_7.html">
                   <h5 class="card-title fs-6 ms-3 me-3 pt-2">32 000 AZN</h5>
                   <h5 class="card-text fs-6 ms-3 me-3">Changan Qiyuan Q05</h5>
                   <p class="card-text fs-6 ms-3 me-3">2024, 1.5 L, 2 000 km</p>
-                  <button
-                    type="button"
-                    class="btn btn btn-primary btn-sm mb-3 ms-3"
-                  >
-                    Call
-                  </button>
+                 <a href="BMW_7.html"><button
+                  type="button"
+                  class="btn btn btn-primary  btn-sm mb-3 ms-3"
+                >
+                Elana Bax
+                </button></a>
+                  <p class="card-text fs-6 ms-3">Elan Nömrəsi № 12</p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1523,7 +1587,7 @@ border-radius: 5px;
         </div>
       </section>
     </main>
-
+    <div class="line_div"></div>    
     <footer
       class="container-fluid d-flex flex-column w-100 h-100 mb-5"
       style="background-color: #ffffff"
@@ -1563,7 +1627,6 @@ border-radius: 5px;
       <p class="text-center text-black ">
         2025 &copy; All rights reserved <br />Bütün Hüquqalar Qorunur
       </p>
-      
     </footer>
 
     <script>
@@ -1747,7 +1810,6 @@ closeBtn_2.addEventListener("click", () => {
 });
 
 
-
      
    
     </script>
@@ -1767,5 +1829,6 @@ closeBtn_2.addEventListener("click", () => {
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+  </div>
   </body>
 </html>
