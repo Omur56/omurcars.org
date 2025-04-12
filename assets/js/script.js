@@ -1,0 +1,1 @@
+// Əlavə funksiyalar burada yerləşəcək
