@@ -39,7 +39,12 @@ $listings = $conn->query("SELECT * FROM listings ORDER BY created_at DESC");
     <nav class="navbar">
       
       <div class="logo_div "><a href="index.html"><img class="logo" src="car_logo.svg" alt="car_logo" /></a><a href="index.html" class="logo_text">OmurCars.org</a></div>
+      
+      <div class="btn_header">
+      <a href="index.html" class="add-btn">Ana səhifə</a>
       <a href="add_listing.php" class="add-btn">Elan yerləşdir</a>
+      </div>
+      
     </nav>
   </header>
   <main>
