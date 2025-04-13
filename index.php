@@ -57,6 +57,11 @@ $listings = $conn->query("SELECT * FROM listings ORDER BY created_at DESC");
           <p><?php echo $row['description']; ?></p>
           <p><strong>Qiymət:</strong> <?php echo $row['price']; ?> AZN</p>
           <p><strong>Əlaqə:</strong> <?php echo $row['phone']; ?></p>
+          <p><strong>Yer:</strong> <?php echo $row['location']; ?></p>
+          <p><strong>Tarix:</strong> <?php echo $row['created_at']; ?></p>
+          <p><strong>ID:</strong> <?php echo $row['id']; ?></p>
+          <p><strong>Kategoriya:</strong> <?php echo $row['category']; ?></p>
+          <a href="delete.php?id=<?php echo $row['id']; ?>" class="delete-btn">Sil</a>
         </div>
       </div>
       <?php endwhile; ?>

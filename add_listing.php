@@ -13,6 +13,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
     header("Location: index.php");
 }
+
+
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="az">
@@ -34,7 +40,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <option value="elektronika">Elektronika</option>
       <option value="mebel">Mebel</option>
     </select>
-    <input type="file" name="image1" required>
+    <input type="file" name="image1" required> 
+    
+
     <button type="submit">Elanı Yerləşdir</button>
   </form>
 </body>
