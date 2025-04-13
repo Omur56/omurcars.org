@@ -10,10 +10,35 @@ $listings = $conn->query("SELECT * FROM listings ORDER BY created_at DESC");
   <title>Elanlar</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
+
+<style>
+.logo_div{
+  display: flex;
+  left: 50px;
+  top: 10px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.logo{
+  width: 100px;
+  height: 50px;
+  
+
+}
+.logo_text{
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+</style>
 <body>
   <header>
-    <nav>
-      <h1>OmurCars</h1>
+    <nav class="navbar">
+      
+      <div class="logo_div "><a href="index.html"><img class="logo" src="car_logo.svg" alt="car_logo" /></a><a href="index.html" class="logo_text">OmurCars.org</a></div>
       <a href="add_listing.php" class="add-btn">Elan yerləşdir</a>
     </nav>
   </header>
