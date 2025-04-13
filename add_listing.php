@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST['phone'];
     $category = $_POST['category'];
     $image = $_FILES['image1']['name'];
+    
     move_uploaded_file($_FILES['image1']['tmp_name'], "uploads/" . $image);
     $stmt = $conn->prepare("INSERT INTO listings (title, description, price, phone, category, image1) VALUES (?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("sssdss", $title, $description, $price, $phone, $category, $image);
