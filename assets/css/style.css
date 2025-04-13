@@ -1,8 +1,8 @@
 
-body {
+* {
   font-family: sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: 0 ;
+  padding: 0 auto;
   box-sizing: border-box;
 }
 .navbar {
@@ -26,6 +26,7 @@ body {
   justify-content: center;
   align-items: center;
   display: flex;
+  top: 10px;
 }
 .add-btn:hover {
   background-color: #45a049;
@@ -33,7 +34,7 @@ body {
 .btn_header{
   position:absolute;
   display: flex;
-left: 60%;
+left: 80%;
   gap: 20px;
 }
 .listing-grid {
@@ -63,3 +64,13 @@ left: 60%;
   flex-direction: column;
   gap: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .btn_header{
+    position:absolute;
+    display: flex;
+    left: 63%;
+    gap: 20px;
+    top: 20px;
+  }
+} 
