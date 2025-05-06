@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #2e7d32, #66bb6a);
+            color: white;
+            text-align: center;
+        }
+        .message-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2rem;
+            color: #66bb6a;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1rem;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <form class="form_profile">
+            <h1>Profil</h1>
+            <div class="forum_group_divider_profile">
+                
+                <p>Name: <span class="name_profile"></span></p>
+                <p>Email: <span class="email_profile"></span></p>
+                <p>Password: <span class="password_profile"></span></p>
+                <p>Confirm Password: <span class="confirm_password_profile"></span></p>
+                <button class="submit_profile" type="submit">Logout</button>
+            </div>
+        </form>
+    
+    </div>
+<script>
+
+    const form_profile = document.querySelector(".form_profile");
+const forum_group_divider_profile = document.querySelector(".forum_group_divider_profile");
+
+const name_profile = document.querySelector(".name_profile");
+const email_profile = document.querySelector(".email_profile");
+const password_profile = document.querySelector(".password_profile");
+const confirm_password_profile = document.querySelector(".confirm_password_profile");
+const submit_profile = document.querySelector(".submit_profile");
+
+const forum_group_divider = document.querySelector(".reqistration_form");
+const name = document.querySelector("#name");
+const surname = document.querySelector("#surname");
+const email = document.querySelector("#email");
+const phone = document.querySelector("#phone");
+const password = document.querySelector("#password");
+const confirm_password = document.querySelector("#confirmPassword");
+const reqistration_form = document.querySelector("#reqistration_form");
+const all_input = document.querySelectorAll("input", "text", "email", "password");
+
+
+
+window.onload = () => {
+    name_profile.innerHTML = localStorage.getItem("name") + " " + localStorage.getItem("name");
+    email_profile.innerHTML = localStorage.getItem("email");
+    password_profile.innerHTML = localStorage.getItem("password");
+    confirm_password_profile.innerHTML = localStorage.getItem("confirmPassword");
+}
+
+
+
+submit_profile.addEventListener("click", (e) => {
+    e.preventDefault()
+    localStorage.removeItem("name");
+    localStorage.removeItem("name");
+    localStorage.removeItem("email");
+    localStorage.removeItem("password");
+    localStorage.removeItem("confirmPassword");
+    console.log(1);
+    window.location.href = "index.html";
+});
+</script>
+</body>
+</html>
