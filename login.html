@@ -92,7 +92,7 @@
     <button type="submit" class="login_button">Daxil ol</button>
 
     <div class="switch">
-      Hesabın yoxdur? <a href="#" onclick="toggleForm()">Qeydiyyatdan keç</a>
+      Hesabın yoxdur? <a class="register_button" href="reqistration.html" onclick="toggleForm()">Qeydiyyatdan keç</a>
     </div>
     <p id="error_message" style="display: none;">Zəhmət olmasa düzgün daxil edin</p>
   </div>
@@ -104,7 +104,15 @@ const email_input_login = document.querySelector('.email_input_login');
 const password_input_login = document.querySelector('#password_input_login');
 const error_message = document.querySelector('#error_message');
 const input_all = document.querySelectorAll('input');
-email_input_login.addEventListener('email', () => {
+const register_button = document.querySelector('.register_button');
+
+
+register_button.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.location.href = "reqistration.html";
+})
+email_input_login.addEventListener('email', (e) => {
+  e.preventDefault();
 if(email_input_login.value = true)
 
   {
