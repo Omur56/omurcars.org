@@ -2,124 +2,165 @@
 <html lang="az">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login və Qeydiyyat</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Qeydiyyat</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f0f4f3;
+      font-family: Arial, sans-serif;
+      background-color: #eef2f3;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
-    .auth-container {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 400px;
+    .form-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      width: 350px;
     }
-    .auth-container h2 {
-      margin-bottom: 1.5rem;
+    .form-container h2 {
       text-align: center;
-      color: #2ecc71;
+      color: #28c76f;
     }
-    .input-group {
-      margin-bottom: 1rem;
-      position: relative;
-    }
-    .input-group input {
+    input {
       width: 100%;
-      padding: 0.75rem 2.5rem 0.75rem 1rem;
+      padding: 10px;
+      margin-top: 10px;
       border: 1px solid #ccc;
-      border-radius: 0.5rem;
-      font-size: 1rem;
+      border-radius: 8px;
+      font-size: 16px;
     }
-    .input-group i {
-      position: absolute;
-      top: 50%;
-      right: 1rem;
-      transform: translateY(-50%);
-      color: #888;
+    input.error {
+      border-color: red;
     }
-    .auth-container button {
-      width: 100%;
-      padding: 0.75rem;
-      background: #2ecc71;
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    button {
+      background-color: #28c76f;
       color: white;
-      font-size: 1rem;
+      padding: 10px;
       border: none;
-      border-radius: 0.5rem;
+      border-radius: 8px;
+      font-size: 16px;
       cursor: pointer;
-      margin-top: 1rem;
-      transition: background 0.3s;
+      width: 100%;
+      margin-top: 20px;
     }
-    .auth-container button:hover {
-      background: #27ae60;
+    button:hover {
+      background-color: #27ae60;
     }
-    .switch {
-      text-align: center;
-      margin-top: 1rem;
+   
+    #terms
+    {
+        width: 20px;
+        justify-content: center;
+        align-items: center;
+        
     }
-    .switch a {
-      color: #2ecc71;
-      text-decoration: none;
-      font-weight: bold;
-    }
+
   </style>
 </head>
 <body>
-  <div class="auth-container" id="loginForm">
-    <h2><i class="fas fa-sign-in-alt"></i> Giriş</h2>
-    <div class="input-group">
-      <input type="email" placeholder="E-poçt" required>
-      <i class="fas fa-envelope"></i>
-    </div>
-    <div class="input-group">
-      <input type="password" placeholder="Şifrə" required>
-      <i class="fas fa-lock"></i>
-    </div>
-    <button onclick="login()">Daxil ol</button>
-    <div class="switch">
-      Hesabın yoxdur? <a href="#" onclick="toggleForm()">Qeydiyyatdan keç</a>
-    </div>
-  </div>
 
-  <div class="auth-container" id="signupForm" style="display: none;">
-    <h2><i class="fas fa-user-plus"></i> Qeydiyyat</h2>
-    <div class="input-group">
-      <input type="text" placeholder="Ad Soyad" required>
-      <i class="fas fa-user"></i>
-    </div>
-    <div class="input-group">
-      <input type="email" placeholder="E-poçt" required>
-      <i class="fas fa-envelope"></i>
-    </div>
-    <div class="input-group">
-      <input type="password" placeholder="Şifrə" required>
-      <i class="fas fa-lock"></i>
-    </div>
-    <button>Qeydiyyatdan keç</button>
-    <div class="switch">
-      Artıq hesabın var? <a href="index.html" onclick="toggleForm()">Daxil ol</a>
-    </div>
-  </div>
+<div class="form-container">
+  <h2>Qeydiyyat</h2>
+  <form id="registerForm">
+    <input type="text" id="name" placeholder="Ad" />
+    <div id="nameError" class="error-message"></div>
 
-  <script>
-    function toggleForm() {
-      const login = document.getElementById("loginForm");
-      const signup = document.getElementById("signupForm");
-      login.style.display = login.style.display === "none" ? "block" : "none";
-      signup.style.display = signup.style.display === "none" ? "block" : "none";
+    <input type="text" id="surname" placeholder="Soyad" />
+    <div id="surnameError" class="error-message"></div>
+
+    <input type="email" id="email" placeholder="E-poçt" />
+    <div id="emailError" class="error-message"></div>
+
+    <input type="tel" id="phone" placeholder="Əlaqə nömrəsi (050XXXXXXX)" />
+    <div id="phoneError" class="error-message"></div>
+
+    <input type="password" id="password" placeholder="Şifrə" />
+    <div id="passwordError" class="error-message"></div>
+
+    <input type="password" id="confirmPassword" placeholder="Şifrəni təkrarla" />
+    <div id="confirmPasswordError" class="error-message"></div>
+    <div class="checkbox_div">
+        <input type="checkbox" id="terms" />
+        <label for="terms">Qaydaları qəbul edirəm</label>
+    </div>
+   
+
+    <button type="submit">Qeydiyyatdan keç</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById('registerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let hasError = false;
+
+    const name = document.getElementById('name');
+    const surname = document.getElementById('surname');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirmPassword');
+
+    // Təmizlə
+    document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+    document.querySelectorAll('input').forEach(input => input.classList.remove('error'));
+
+    if (name.value.trim() === '') {
+      document.getElementById('nameError').textContent = 'Ad boş ola bilməz!';
+      name.classList.add('error');
+      hasError = true;
     }
-  </script>
+
+    if (surname.value.trim() === '') {
+      document.getElementById('surnameError').textContent = 'Soyad boş ola bilməz!';
+      surname.classList.add('error');
+      hasError = true;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.value.trim())) {
+      document.getElementById('emailError').textContent = 'E-poçt düzgün deyil!';
+      email.classList.add('error');
+      hasError = true;
+    }
+
+    const phoneRegex = /^05\d{8}$/;
+    if (!phoneRegex.test(phone.value.trim())) {
+      document.getElementById('phoneError').textContent = 'Əlaqə nömrəsi düzgün deyil!';
+      phone.classList.add('error');
+      hasError = true;
+    }
+
+    if (password.value.trim().length < 6) {
+      document.getElementById('passwordError').textContent = 'Şifrə ən azı 6 simvol olmalıdır!';
+      password.classList.add('error');
+      hasError = true;
+    }
+    if (password.value.trim() !== confirmPassword.value.trim()) {      
+      document.getElementById('confirmPasswordError').textContent = 'Şifrələr eyni deyil!';
+      confirmPassword.classList.add('error');
+      hasError = true;
+    }
+    if (!document.getElementById('terms').checked) {
+      document.getElementById('termsError').textContent = 'Qaydaları qəbul etməlisiniz!';
+      hasError = true;
+    }
+
+    if (!hasError) {
+      alert('Qeydiyyat uğurla tamamlandı!');
+      window.location.href = "index.html";
+      // Burada backend-ə göndərə bilərsən
+    }
+  });
+</script>
+
 </body>
 </html>
