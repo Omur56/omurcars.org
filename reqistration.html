@@ -160,6 +160,49 @@
       // Burada backend-ə göndərə bilərsən
     }
   });
+
+
+
+
+
+submit.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const reqistration = {
+        name: frist_name.value,
+        surname: last_name.value,
+        email: email.value,
+        password: password.value,
+        confirmPassword: confirmPassword.value,
+    };
+
+    localStorage.setItem("name", name.value);
+    localStorage.setItem("surname", surname.value);
+    localStorage.setItem("phone", phone.value);
+    localStorage.setItem("password", password.value);
+    localStorage.setItem("confirmPassword", confirmPassword.value);
+    localStorage.setItem("email", email.value);
+    console.log(reqistration);
+
+
+    if (name.value === "" || name.value === "" || email.value === "" || password.value === "" || confirmPassword.value === "") {
+        name.style.border = "1px solid red";
+        surname.style.border = "1px solid red";
+        email.style.border = "1px solid red";
+        password.style.border = "1px solid red";
+        confirm_password.style.border = "1px solid red";
+
+    } else {
+        window.location.href = "index.html";
+        console.log(1);
+        name.value = "";
+        surname.value = "";
+        email.value = "";
+        password.value = "";
+        confirmPassword.value = "";
+    }
+});
+
+
 </script>
 
 </body>

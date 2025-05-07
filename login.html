@@ -74,52 +74,85 @@
       text-decoration: none;
       font-weight: bold;
     }
+   
   </style>
 </head>
 <body>
+  <form>
   <div class="auth-container" id="loginForm">
     <h2><i class="fas fa-sign-in-alt"></i> Giriş</h2>
     <div class="input-group">
-      <input type="email" placeholder="E-poçt">
+      <input class="email_input_login" type="email" placeholder="E-poçt">
       <i class="fas fa-envelope"></i>
     </div>
     <div class="input-group">
-      <input type="password" placeholder="Şifrə">
+      <input id="password_input_login" type="password" placeholder="Şifrə">
       <i class="fas fa-lock"></i>
     </div>
-    <button>Daxil ol</button>
+    <button type="submit" class="login_button">Daxil ol</button>
+
     <div class="switch">
-      Hesabın yoxdur? <a href="#" onclick="toggleForm()">Qeydiyyatdan keç</a>
+      Hesabın yoxdur? <a class="register_button" href="reqistration.html" onclick="toggleForm()">Qeydiyyatdan keç</a>
     </div>
+    <p id="error_message" style="display: none;">Zəhmət olmasa düzgün daxil edin</p>
   </div>
 
-  <div class="auth-container" id="signupForm" style="display: none;">
-    <h2><i class="fas fa-user-plus"></i> Qeydiyyat</h2>
-    <div class="input-group">
-      <input type="text" placeholder="Ad Soyad">
-      <i class="fas fa-user"></i>
-    </div>
-    <div class="input-group">
-      <input type="email" placeholder="E-poçt">
-      <i class="fas fa-envelope"></i>
-    </div>
-    <div class="input-group">
-      <input type="password" placeholder="Şifrə">
-      <i class="fas fa-lock"></i>
-    </div>
-    <button>Qeydiyyatdan keç</button>
-    <div class="switch">
-      Artıq hesabın var? <a href="#" onclick="toggleForm()">Daxil ol</a>
-    </div>
-  </div>
-
+</form>
   <script>
-    function toggleForm() {
-      const login = document.getElementById("loginForm");
-      const signup = document.getElementById("signupForm");
-      login.style.display = login.style.display === "none" ? "block" : "none";
-      signup.style.display = signup.style.display === "none" ? "block" : "none";
-    }
+const login_button = document.querySelector('.login_button');
+const email_input_login = document.querySelector('.email_input_login');
+const password_input_login = document.querySelector('#password_input_login');
+const error_message = document.querySelector('#error_message');
+const input_all = document.querySelectorAll('input');
+const register_button = document.querySelector('.register_button');
+
+
+register_button.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.location.href = "reqistration.html";
+})
+email_input_login.addEventListener('email', (e) => {
+  e.preventDefault();
+if(email_input_login.value = true)
+
+  {
+  return /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; 
+  }
+});
+
+login_button.addEventListener('click', (e) => {
+  e.preventDefault();
+ const reqstration = {
+  "email": email_input_login.value,
+  "password": password_input_login.value
+  
+ }
+ localStorage.setItem("email", email_input_login.value);
+ localStorage.setItem("password", password_input_login.value);
+if(email_input_login.value == "" || password_input_login.value == "" )
+  {
+  
+  error_message.style.display = "block";
+  error_message.style.color = "red";
+  error_message.textContent = "məlumatları düzgün daxil edin!";
+  email_input_login.style.borderColor = "red";
+  password_input_login.style.borderColor = "red";
+
+}else{
+
+  error_message.style.display = "none";
+  window.location.href = "index.html";
+  email_input_login.value = "";
+  password_input_login.value = "";
+}
+ 
+
+
+
+});
+
+
+    
   </script>
 </body>
 </html>
